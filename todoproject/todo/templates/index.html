@@ -7,18 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <style>
+        /* CSS styles for the page layout */
         body { font-family: Arial, sans-serif; }
         .todo-list { max-width: 500px; margin: auto; }
         .todo-item { display: flex; justify-content: space-between; }
     </style>
 </head>
 <body>
+    <!-- Container for the to-do list -->
     <div class="todo-list">
+        <!-- Heading -->
         <h1>To-Do List</h1>
+        <!-- Unordered list to display tasks -->
         <ul id="tasks"></ul>
-        <input type="text" id="taskInput" placeholder="New task...">
-        <button onclick="addTask()">Add Task</button>
+        <!-- Input field and button for adding new tasks (commented out) -->
+        <!-- <input type="text" id="taskInput" placeholder="New task..."> -->
+        <!-- <button onclick="addTask()">Add Task</button> -->
     </div>
+    <!-- JavaScript code for fetching tasks from the backend and displaying them -->
     <script>
         async function fetchTasks() {
             const response = await fetch('/api/todos/');
@@ -33,24 +39,26 @@
             });
         }
 
-        async function addTask() {
-            const taskInput = document.getElementById('taskInput');
-            const newTask = { task: taskInput.value, completed: false };
+        // JavaScript function for adding new tasks (commented out)
+        // async function addTask() {
+        //     const taskInput = document.getElementById('taskInput');
+        //     const newTask = { task: taskInput.value, completed: false };
 
-            const response = await fetch('/api/todos/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(newTask)
-            });
+        //     const response = await fetch('/api/todos/', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(newTask)
+        //     });
 
-            if (response.ok) {
-                fetchTasks();
-                taskInput.value = '';
-            }
-        }
+        //     if (response.ok) {
+        //         fetchTasks();
+        //         taskInput.value = '';
+        //     }
+        // }
 
+        // Event listener to fetch tasks when the DOM content is loaded
         document.addEventListener('DOMContentLoaded', fetchTasks);
     </script>
 </body>

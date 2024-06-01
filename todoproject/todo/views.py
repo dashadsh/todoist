@@ -11,7 +11,7 @@ class ToDoViewSet(viewsets.ModelViewSet):
     queryset = ToDo.objects.all()
     serializer_class = ToDoSerializer
 
-from django.shortcuts import render
+# needed??
 
 def index(request):
     return render(request, 'index.html')
