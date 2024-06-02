@@ -1,12 +1,15 @@
+```
 pip install django
 pip install djangorestframework
+```
 
-# create new "todoproject"
+create new "todoproject"
+```
 django-admin startproject todoproject
 cd todoproject
-
-# Creates a Directory: It creates a directory named todoproject.
-# Creates Subdirectories and Files: Inside todoproject, it creates the following structure:
+```
+Creates a Directory: It creates a directory named todoproject.
+Creates Subdirectories and Files: Inside todoproject, it creates the following structure:
 
 todoproject/
     manage.py
@@ -23,10 +26,12 @@ urls.py: The URL declarations for this Django project; a “table of contents”
 wsgi.py: An entry-point for WSGI-compatible web servers to serve your project.
 
 
-# Inside the project directory, create a new app called todo:
+Inside the project directory, create a new app called todo:
+```
 python3 manage.py startapp todo
+```
 
-# It will create: 
+It will create: 
 todo/
     __init__.py
     admin.py
@@ -37,26 +42,32 @@ todo/
     tests.py
     views.py
 
-
---------------------------------------------------------------------------------------------------
-
-# edit todoproject/setting.py
-
-# edit todo/models.py
-
+```
+edit todoproject/setting.py
+```
+```
+edit todo/models.py
+```
+```
 python manage.py makemigrations
 python manage.py migrate
-
+```
+```
 touch todo/serializers.py
-# edit todo/serializers.py
-
-# edit todo/views.py
-
+edit todo/serializers.py
+```
+```
+edit todo/views.py
+```
+```
 touch todo/urls.py
-# edit todoproject/urls.py
-
+edit todo/urls.py
+```
+```
 mkdir todo/templates
 touch todo/templates/index.html
-# edit todo/templates/index.html
-
+edit todo/templates/index.html
+```
+```
 python3 manage.py runserver
+```
