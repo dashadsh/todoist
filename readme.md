@@ -11,19 +11,19 @@ cd todoproject
 Creates a Directory: It creates a directory named todoproject.
 Creates Subdirectories and Files: Inside todoproject, it creates the following structure:
 
-todoproject/
-    manage.py
-    todoproject/
-        __init__.py
-        settings.py
-        urls.py
-        wsgi.py
+todoproject/  
+    manage.py  
+    todoproject/  
+        __init__.py  
+        settings.py  
+        urls.py  
+        wsgi.py  
 
-manage.py: A command-line utility that lets you interact with this Django project. You’ll use it to run commands like runserver, migrate, and startapp.
-init.py: An empty file that tells Python this directory should be considered a Python package.
-settings.py: Contains all the configuration for your Django project.
-urls.py: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
-wsgi.py: An entry-point for WSGI-compatible web servers to serve your project.
+**manage.py:** A command-line utility that lets you interact with this Django project. You’ll use it to run commands like runserver, migrate, and startapp.  
+**init.py:** An empty file that tells Python this directory should be considered a Python package.  
+**settings.py:** Contains all the configuration for your Django project.  
+**urls.py:** The URL declarations for this Django project; a “table of contents” of your Django-powered site.  
+**wsgi.py:** An entry-point for WSGI-compatible web servers to serve your project.  
 
 
 Inside the project directory, create a new app called todo:
@@ -43,10 +43,10 @@ todo/
     views.py
 
 ```
-edit todoproject/setting.py
+nano todoproject/setting.py
 ```
 ```
-edit todo/models.py
+nano todo/models.py
 ```
 ```
 python manage.py makemigrations
@@ -54,19 +54,19 @@ python manage.py migrate
 ```
 ```
 touch todo/serializers.py
-edit todo/serializers.py
+nano todo/serializers.py
 ```
 ```
 edit todo/views.py
 ```
 ```
 touch todo/urls.py
-edit todo/urls.py
+nano todo/urls.py
 ```
 ```
 mkdir todo/templates
 touch todo/templates/index.html
-edit todo/templates/index.html
+nano todo/templates/index.html
 ```
 ```
 python3 manage.py runserver
